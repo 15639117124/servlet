@@ -15,6 +15,7 @@ public class TestServlet4 extends HttpServlet {
         System.out.println("测试servlet的不同映射方式");
         System.out.println("sss");
         System.out.println("hhhhhhh");
+        System.out.println("k");
     }
 
     @Override
