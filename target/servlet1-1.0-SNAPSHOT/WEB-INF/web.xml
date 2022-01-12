@@ -34,4 +34,26 @@
         <servlet-name>testServlet3</servlet-name>
         <url-pattern>/testServlet3</url-pattern>
     </servlet-mapping>
+
+
+    <!-- 使用通配符来映射servlet路径-->
+<!--    <servlet>-->
+<!--        <servlet-name>testServlet4</servlet-name>-->
+<!--        <servlet-class>com.example.servlet1.TestServlet4</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>testServlet4</servlet-name>-->
+<!--        <url-pattern>/testServlet/*</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+
+    <!-- 使用*.do来映射路径，do 也可以换成其他的，凡是以do结尾的Url都能找到此servlet-->
+    <servlet>
+        <servlet-name>testServlet4</servlet-name>
+        <servlet-class>com.example.servlet1.TestServlet4</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testServlet4</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
 </web-app>
