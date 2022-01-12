@@ -51,9 +51,30 @@
     <servlet>
         <servlet-name>testServlet4</servlet-name>
         <servlet-class>com.example.servlet1.TestServlet4</servlet-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>testServlet4</servlet-name>
         <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>testServletConfig</servlet-name>
+        <servlet-class>com.example.servlet1.TestServletConfig</servlet-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>desc</param-name>
+            <param-value>descValue</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testServletConfig</servlet-name>
+        <url-pattern>/testServletConfig</url-pattern>
     </servlet-mapping>
 </web-app>
