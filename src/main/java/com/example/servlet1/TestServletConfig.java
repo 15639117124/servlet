@@ -43,6 +43,8 @@ public class TestServletConfig extends HttpServlet {
 
         //获取servletContext对象,servletConfig对象又服务器提供
         ServletContext servletContext = servletConfig.getServletContext();
+
+        System.out.println(servletContext.getAttribute("name"));
     }
 
     @Override

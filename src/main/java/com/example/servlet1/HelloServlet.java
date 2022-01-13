@@ -13,6 +13,8 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        System.out.println(getServletContext().getAttribute("name"));
         response.setContentType("text/html");
 
         // Hello
@@ -20,6 +22,8 @@ public class HelloServlet extends HttpServlet {
         out.println("<html><body>");
         out.println("<h1>" + message + "</h1>");
         out.println("</body></html>");
+
+        System.out.println(getServletContext().getAttribute("name"));
     }
 
     public void destroy() {

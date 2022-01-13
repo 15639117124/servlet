@@ -10,5 +10,7 @@ public class TestServlet1 extends GenericServlet {
     @Override
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
         System.out.println("service执行了");
+
+        System.out.println(getServletContext().getAttribute("name"));
     }
 }

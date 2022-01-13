@@ -4,11 +4,23 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+    
+    <!-- 配置servletContext应用域对象-->
+    <context-param>
+        <param-name>globalEncoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+    <context-param>
+        <param-name>namespace</param-name>
+        <param-value>namespaceValue</param-value>
+    </context-param>
+
+
 
     <!--servlet1-->
     <servlet>
         <servlet-name>testServlet</servlet-name>
-        <servlet-class>com.example.servlet1.TestServlet1</servlet-class>
+        <servlet-class>com.example.servlet1.HelloServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>testServlet</servlet-name>
@@ -76,5 +88,14 @@
     <servlet-mapping>
         <servlet-name>testServletConfig</servlet-name>
         <url-pattern>/testServletConfig</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>testServletContext</servlet-name>
+        <servlet-class>com.example.servlet1.TestServletContext</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testServletContext</servlet-name>
+        <url-pattern>/testServletContext</url-pattern>
     </servlet-mapping>
 </web-app>
